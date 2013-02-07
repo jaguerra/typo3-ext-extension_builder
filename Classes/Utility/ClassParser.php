@@ -520,7 +520,7 @@ class Tx_ExtensionBuilder_Utility_ClassParser implements t3lib_singleton {
 								$varType = 'array';
 							}
 							else {
-								eval('$varType = gettype(' . $propertyValue . ');');
+								  //eval('$varType = gettype(' . $propertyValue . ');');
 							}
 
 							if (!empty($varType) && $varType != 'NULL') {

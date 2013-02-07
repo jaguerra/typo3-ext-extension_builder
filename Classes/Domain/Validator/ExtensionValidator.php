@@ -530,9 +530,11 @@ class Tx_ExtensionBuilder_Domain_Validator_ExtensionValidator extends Tx_Extbase
 
 			foreach ($actionNames as $actionName) {
 				if (!in_array($actionName, $existingActionNames)) {
-					$this->validationResult['warnings'][] = new Tx_ExtensionBuilder_Domain_Exception_ExtensionException(
+          /*
+            $this->validationResult['warnings'][] = new Tx_ExtensionBuilder_Domain_Exception_ExtensionException(
 						'Potential misconfiguration in ' . $label . ':<br />Controller ' . $controllerName . ' has no action named ' . $actionName,
-						self::ERROR_MISCONFIGURATION);
+            self::ERROR_MISCONFIGURATION);
+           */
 				}
 			}
 		}

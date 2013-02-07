@@ -103,10 +103,10 @@ YAHOO.lang.extend(WireIt.Wire, WireIt.CanvasElement, {
 		this.options.coeffMulDirection = YAHOO.lang.isUndefined(options.coeffMulDirection) ? 100 : options.coeffMulDirection;
 
 		// Syling
-		this.options.drawingMethod = options.drawingMethod || 'bezier';
-		this.options.cap = options.cap || 'round';
-		this.options.bordercap = options.bordercap || 'round';
-		this.options.width = options.width || 3;
+		this.options.drawingMethod = options.drawingMethod || 'arrows';
+		this.options.cap = options.cap || 'butt';
+		this.options.bordercap = options.bordercap || 'butt';
+		this.options.width = options.width || 2;
 		this.options.borderwidth = options.borderwidth || 1;
 		this.options.color = options.color || 'rgb(173, 216, 230)';
 		this.options.bordercolor = options.bordercolor || '#0000ff';

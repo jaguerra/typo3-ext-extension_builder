@@ -1,30 +1,8 @@
 'type' => 'select',
 'foreign_table' => '{property.foreignDatabaseTableName}',
+'foreign_table_where' => 'AND ({property.foreignDatabaseTableName}.pid = ###CURRENT_PID### or {property.foreignDatabaseTableName}.pid = ###STORAGE_PID### or {property.foreignDatabaseTableName}.pid IN (###PAGE_TSCONFIG_IDLIST###)) ORDER BY {property.foreignDatabaseTableName}.{f:if(condition:property.foreignModel.sorting, then:'sorting', else:'name')}',
 'MM' => '{property.relationTableName}',
 'size' => 10,
 'autoSizeMax' => 30,
 'maxitems' => 9999,
 'multiple' => 0,
-'wizards' => array(
-	'_PADDING' => 1,
-	'_VERTICAL' => 1,
-	'edit' => array(
-		'type' => 'popup',
-		'title' => 'Edit',
-		'script' => 'wizard_edit.php',
-		'icon' => 'edit2.gif',
-		'popup_onlyOpenIfSelected' => 1,
-		'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
-		),
-	'add' => Array(
-		'type' => 'script',
-		'title' => 'Create new',
-		'icon' => 'add.gif',
-		'params' => array(
-			'table' => '{property.foreignDatabaseTableName}',
-			'pid' => '###CURRENT_PID###',
-			'setValue' => 'prepend'
-			),
-		'script' => 'wizard_add.php',
-	),
-),
